@@ -3,7 +3,12 @@ $cyan: hsl(184, 100%, 22%);
 $darkcyan: hsl(179, 100%, 13%);
 $white: hsla(0, 0%, 100%, 0.75);
 $light-gray: hsl(0, 0%, 95%);
-$gap: 5rem;
+
+$large: 60em; // 960 px
+$medium: 52.5em; // 840 px
+$small: 46.25em; // 740 px
+$smaller: 31.25em; // 500 px
+
 
 * {
     margin: 0;
@@ -19,6 +24,18 @@ $gap: 5rem;
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+
+    @media only screen and (max-width: $large) {
+        font-size: 56.25%;
+    }
+
+    @media only screen and (max-width: $medium) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $small) {
+        font-size: 62.5%;
+    }
 }
 
 body {
@@ -37,6 +54,15 @@ body {
     border-radius: 1rem;
     max-width: 92rem;
     overflow: hidden;
+
+    @media only screen and (max-width: $small) {
+        flex-direction: column;
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin: 5vh 5vh 10vh;
+    }
 }
 
 .card {
@@ -57,6 +83,10 @@ body {
     &--darkcyan {
         background-color: $darkcyan;
     }
+
+    @media only screen and (max-width: $small) {
+        min-height: 42rem;
+    }
 }
 
 .icon {;
@@ -76,6 +106,10 @@ body {
     color: $white;
     line-height: 1.7;
     margin-bottom: 7.5rem;
+
+    @media only screen and (max-width: $smaller) {
+        margin-bottom: 4.5rem;
+    }
 }
 
 .btn {
@@ -121,7 +155,7 @@ body {
 
 .attribution {
     position: absolute;
-    bottom: 1rem;
+    bottom: 1.5rem;
     width: 100%;
     text-align: center;
     color: hsl(0, 0%, 75%);
@@ -129,5 +163,10 @@ body {
     &__link {
         text-decoration: none;
         color: hsl(0, 0%, 65%);
+    }
+
+    @media only screen and (max-width: $small) {
+        position: relative;
+        padding: 0 5vh;
     }
 }

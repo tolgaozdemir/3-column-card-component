@@ -10,6 +10,15 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media only screen and (max-width: 60em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 52.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 46.25em) {
+    html {
+      font-size: 62.5%; } }
 
 body {
   background-color: #f2f2f2;
@@ -26,6 +35,14 @@ body {
   border-radius: 1rem;
   max-width: 92rem;
   overflow: hidden; }
+  @media only screen and (max-width: 46.25em) {
+    .container {
+      flex-direction: column;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin: 5vh 5vh 10vh; } }
 
 .card {
   min-width: 30rem;
@@ -39,6 +56,9 @@ body {
     background-color: #006970; }
   .card--darkcyan {
     background-color: #004241; }
+  @media only screen and (max-width: 46.25em) {
+    .card {
+      min-height: 42rem; } }
 
 .icon {
   width: 6.5rem;
@@ -55,6 +75,9 @@ body {
   color: rgba(255, 255, 255, 0.75);
   line-height: 1.7;
   margin-bottom: 7.5rem; }
+  @media only screen and (max-width: 31.25em) {
+    .paragraph {
+      margin-bottom: 4.5rem; } }
 
 .btn, .btn:link, .btn:visited {
   background-color: #f2f2f2;
@@ -86,10 +109,14 @@ body {
 
 .attribution {
   position: absolute;
-  bottom: 1rem;
+  bottom: 1.5rem;
   width: 100%;
   text-align: center;
   color: #bfbfbf; }
   .attribution__link {
     text-decoration: none;
     color: #a6a6a6; }
+  @media only screen and (max-width: 46.25em) {
+    .attribution {
+      position: relative;
+      padding: 0 5vh; } }
