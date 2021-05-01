@@ -5,9 +5,15 @@ $darker-cyan: hsl(179, 100%, 13%);
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
-
-.attribution {
-    color: $orange;
+  
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+  
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
 }
