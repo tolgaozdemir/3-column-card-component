@@ -73,7 +73,7 @@ body {
   outline: none;
   color: inherit;
   background-color: transparent;
-  transform: scale(1); }
+  transform: scale(0.95); }
 
 .btn--orange {
   color: #e38826; }
@@ -88,4 +88,8 @@ body {
   position: absolute;
   bottom: 1rem;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  color: #bfbfbf; }
+  .attribution__link {
+    text-decoration: none;
+    color: #a6a6a6; }
