@@ -1,6 +1,9 @@
 $orange: hsl(31, 77%, 52%);
-$dark-cyan: hsl(184, 100%, 22%);
-$darker-cyan: hsl(179, 100%, 13%);
+$cyan: hsl(184, 100%, 22%);
+$darkcyan: hsl(179, 100%, 13%);
+$white: hsla(0, 0%, 100%, 0.75);
+$light-gray: hsl(0, 0%, 95%);
+$gap: 5rem;
 
 * {
     margin: 0;
@@ -16,4 +19,109 @@ $darker-cyan: hsl(179, 100%, 13%);
 html {
     box-sizing: border-box;
     font-size: 62.5%;
+}
+
+body {
+    background-color: $light-gray;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 1.5rem;
+    color: $white;
+}
+
+.container {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 1rem;
+    max-width: 92rem;
+    overflow: hidden;
+}
+
+.card {
+    min-width: 30rem;
+    min-height: 50rem;
+    flex: 1;
+    padding: 5rem;
+    color: $light-gray;
+
+    &--orange {
+        background-color: $orange;
+    }
+
+    &--cyan {
+        background-color: $cyan;
+    }
+
+    &--darkcyan {
+        background-color: $darkcyan;
+    }
+}
+
+.icon {;
+    width: 6.5rem;
+    margin-bottom: 3.5rem;
+}
+
+.heading {
+    font-family: 'Big Shoulders Display', sans-serif;
+    font-size: 4rem;
+    color: $light-gray;
+    text-transform: uppercase;
+    margin-bottom: 2.8rem;
+}
+
+.paragraph {
+    color: $white;
+    line-height: 1.7;
+    margin-bottom: 7.5rem;
+}
+
+.btn {
+    &,
+    &:link,
+    &:visited {
+        background-color: $light-gray;
+        border: 2px solid $light-gray;
+        border-radius: 10rem;
+        text-decoration: none;
+        padding: 1.3rem 2.6rem;
+        display: inline-block;
+        cursor: pointer;
+        transition: all .2s;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        color: inherit;
+        background-color: transparent;
+        transform: scale(1);
+    }
+
+    &--orange {
+        color: $orange;
+    }
+
+    &--cyan {
+        color: $cyan;
+    }
+
+    &--darkcyan {
+        color: $darkcyan;
+    }
+}
+
+// attribution
+
+.attribution {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+    text-align: center;
 }
