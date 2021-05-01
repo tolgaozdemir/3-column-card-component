@@ -1,0 +1,122 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+  @media only screen and (max-width: 60em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 52.5em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (max-width: 46.25em) {
+    html {
+      font-size: 62.5%; } }
+
+body {
+  background-color: #f2f2f2;
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 1.5rem;
+  color: rgba(255, 255, 255, 0.75); }
+
+.container {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 1rem;
+  max-width: 92rem;
+  overflow: hidden; }
+  @media only screen and (max-width: 46.25em) {
+    .container {
+      flex-direction: column;
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+      margin: 5vh 5vh 10vh; } }
+
+.card {
+  min-width: 30rem;
+  min-height: 50rem;
+  flex: 1;
+  padding: 5rem;
+  color: #f2f2f2; }
+  .card--orange {
+    background-color: #e38826; }
+  .card--cyan {
+    background-color: #006970; }
+  .card--darkcyan {
+    background-color: #004241; }
+  @media only screen and (max-width: 46.25em) {
+    .card {
+      min-height: 42rem; } }
+
+.icon {
+  width: 6.5rem;
+  margin-bottom: 3.5rem; }
+
+.heading {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-size: 4rem;
+  color: #f2f2f2;
+  text-transform: uppercase;
+  margin-bottom: 2.8rem; }
+
+.paragraph {
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  margin-bottom: 7.5rem; }
+  @media only screen and (max-width: 31.25em) {
+    .paragraph {
+      margin-bottom: 4.5rem; } }
+
+.btn, .btn:link, .btn:visited {
+  background-color: #f2f2f2;
+  border: 2px solid #f2f2f2;
+  border-radius: 10rem;
+  text-decoration: none;
+  padding: 1.3rem 2.6rem;
+  display: inline-block;
+  cursor: pointer;
+  transition: all .2s; }
+
+.btn:hover {
+  transform: scale(1.05); }
+
+.btn:active, .btn:focus {
+  outline: none;
+  color: inherit;
+  background-color: transparent;
+  transform: scale(0.95); }
+
+.btn--orange {
+  color: #e38826; }
+
+.btn--cyan {
+  color: #006970; }
+
+.btn--darkcyan {
+  color: #004241; }
+
+.attribution {
+  position: absolute;
+  bottom: 1.5rem;
+  width: 100%;
+  text-align: center;
+  color: #bfbfbf; }
+  .attribution__link {
+    text-decoration: none;
+    color: #a6a6a6; }
+  @media only screen and (max-width: 46.25em) {
+    .attribution {
+      position: relative;
+      padding: 0 5vh; } }
